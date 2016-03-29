@@ -30,11 +30,36 @@ First you have to specify what database you want to access, then you have specif
 
 database.collection.operation
 
+To create a new object in the mongoDB you have to call the .insert()
+
 ```javascript
 db.employees.insert(
 {
   name: "random",
   titles: [ { title1: "title1" }, { title2: "title2"} ]
+})
+```
+
+To retrieve a item you have to call either .find() or .findOne()
+
+.findOne() where it gets the first item that matches the search
+```javascript
+db.employees.findOne(
+{
+  name: "random"
+})
+```
+
+.remove()
+
+to remove all documents in the specific collection or specific
+```javascript
+db.employees.remove();
+```
+```javascript
+db.employees.findOne(
+{
+  name: "random"
 })
 ```
 
