@@ -14,3 +14,7 @@ Cons
 * Difficult to manage
 * Quite new
 
+**Explain how databases like MongoDB and redis would be classified in the NoSQL world**
+
+They're both document based databases, where the key value got data stored with it, and each document got a unique key to retrieve it.
+
