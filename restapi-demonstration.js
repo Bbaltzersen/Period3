@@ -41,7 +41,16 @@ router.route('/employee')
             res.json(employee);
         });
     });
+// Find employee with ID
+router.route('/employee/:employee_id')
+.get(function (req, res) {
+        api.findById(req.params.employee_id, function (err, employee) {
+            if (err)
+                res.send(err);
 
+            res.json(employee);
+        });
+    });
 
 app.use('/api', router);
 app.listen(port);
