@@ -57,7 +57,6 @@ db.employees.findOne(
 ```
 
 **Remove**
-
 .remove()
 
 to remove all documents in the specific collection or specific
