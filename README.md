@@ -87,3 +87,12 @@ db.employees.findOne(
 **Demonstrate, using a REST-API, how to perform all CRUD operations on a MongoDB**
 
 Can be found in the restapi-demonstration.js
+
+**Explain the benefits from using Mongoose** 
+
+It makes the database more comfortable to work with, because it abstraction to the database by mapping it by objects.
+
+**Explain how redis "fits" into the NoSQL world**
+
+It's a key value database, it's great when you want to handle sessions.
+
