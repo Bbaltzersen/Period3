@@ -42,45 +42,6 @@ router.route('/employee')
         });
     });
 
-router.route('/employee/:employee_id')
-
-    .get(function (req, res) {
-        api.findById(req.params.employee_id, function (err, employee) {
-            if (err)
-                res.send(err);
-
-            res.json(employee);
-        });
-    })
-
-    .put(function (req, res) {
-        api.findOneAndUpdate(
-
-            //ID of the item to find
-            {_id: req.params.employee_id},
-
-            //Name of the item to find
-            {name: 'random'}, {},
-
-            //The callback
-            function (err, employee) {
-            if (err) {
-                res.send(err);
-            } else {
-            }
-
-
-        });
-    })
-    .delete(function (req, res) {
-        api.remove({
-            _id: req.params.employee_id
-        }, function (err, employee) {
-            if (err)
-                res.send(err);
-        });
-    });
-
 
 app.use('/api', router);
 app.listen(port);
