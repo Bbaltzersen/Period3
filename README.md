@@ -35,7 +35,6 @@ db.employees.insert(
 {
   name: "random",
   titles: [ { title1: "title1" }, { title2: "title2"} ]
-}
-)
+})
 ```
 
