@@ -39,6 +39,7 @@ To create a new object in the mongoDB you have to call the .insert()
 db.employees.insert(
 {
   name: "random",
+  lastName: "randomLastName",
   titles: [ { title1: "title1" }, { title2: "title2"} ]
 })
 ```
@@ -56,7 +57,20 @@ db.employees.findOne(
 })
 ```
 
-**Remove**
+**Update**
+.update()
+
+When you want to change a item to have to call the $Set to specify what field have to be changed
+```javascript
+db.employees.update(
+{ name: "random" },
+   {
+   $set: { lastName: "NEWrandomLastName" }
+   }
+  )
+```
+
+**Delete**
 .remove()
 
 to remove all documents in the specific collection or specific
